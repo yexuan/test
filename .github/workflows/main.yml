@@ -8,13 +8,12 @@ on:
   pull_request:
     branches:
       - main
-    types: [closed]
 
 
 jobs:
   comment:
     runs-on: ubuntu-latest
-    if: github.event.pull_request.merged == true
+    #if: github.event.pull_request.merged == true
     steps:
       - name: Contribute List
         uses: akhilmhdh/contributors-readme-action@v2.3.4
